@@ -174,7 +174,9 @@ printf("체중을 입력하세요.(kg 단위) : ");
 scanf(" %f", &kg);
 printf("\n키를 입력하세요.(cm 단위) : ");
 scanf(" %f", &cm);
-cm *= 0.01f;
+(cm > 4.0 ? cm *= 0.01f : cm); //cm, m 공용 // 설마 4미터 넘는 인간이 있진 않겠지 
+
+//cm *= 0.01f; //cm용
 
 bmi = kg / (cm * cm);
 
